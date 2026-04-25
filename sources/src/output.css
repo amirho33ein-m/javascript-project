@@ -33,6 +33,8 @@
     --default-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
     --default-font-family: var(--font-sans);
     --default-mono-font-family: var(--font-mono);
+    --font-shabnam-Bold: "shabnam-Bold";
+    --font-shabnam-Light: "shabnam-Light";
   }
 }
 @layer base {
@@ -202,9 +204,6 @@
       max-width: 96rem;
     }
   }
-  .mx-auto {
-    margin-inline: auto;
-  }
   .mt-1 {
     margin-top: calc(var(--spacing) * 1);
   }
@@ -275,9 +274,6 @@
   .justify-end {
     justify-content: flex-end;
   }
-  .justify-items-end {
-    justify-items: end;
-  }
   .gap-2 {
     gap: calc(var(--spacing) * 2);
   }
@@ -310,9 +306,6 @@
   .border-b {
     border-bottom-style: var(--tw-border-style);
     border-bottom-width: 1px;
-  }
-  .border-gray-200 {
-    border-color: var(--color-gray-200);
   }
   .border-t-gray-200 {
     border-top-color: var(--color-gray-200);
@@ -385,6 +378,12 @@
   }
   .indent-2\.5 {
     text-indent: calc(var(--spacing) * 2.5);
+  }
+  .font-shabnam-Bold {
+    font-family: var(--font-shabnam-Bold);
+  }
+  .font-shabnam-Light {
+    font-family: var(--font-shabnam-Light);
   }
   .text-8xl {
     font-size: var(--text-8xl);
@@ -478,7 +477,32 @@
     }
   }
 }
-@layer base;
+@layer base {
+  @font-face {
+    font-family: "shabnam-Bold";
+    src: url("../fonts/shabnam-font/Shabnam-Bold.woff2") format("woff2");
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+  }
+  @font-face {
+    font-family: "shabnam-Medium";
+    src: url("../fonts/shabnam-font/Shabnam-Medium.woff2") format("woff2");
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+  }
+  @font-face {
+    font-family: "shabnam-Light";
+    src: url("../fonts/shabnam-font/Shabnam-Light.woff2") format("woff2");
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+  }
+  *, *:after, *::before {
+    font-family: "shabnam-Medium";
+  }
+}
 @layer utilities {
   .container {
     margin-inline: auto;

@@ -1,7 +1,33 @@
 @import "tailwindcss";
 
 @layer base{
-
+    @font-face {
+        font-family: "shabnam-Bold";
+        src: url("../fonts/shabnam-font/Shabnam-Bold.woff2") format("woff2");
+        font-weight: normal;
+        font-style: normal;
+        font-display: swap;
+    }
+    @font-face {
+        font-family: "shabnam-Medium";
+        src: url("../fonts/shabnam-font/Shabnam-Medium.woff2") format("woff2");
+        font-weight: normal;
+        font-style: normal;
+        font-display: swap;
+    }
+    @font-face {
+        font-family: "shabnam-Light";
+        src: url("../fonts/shabnam-font/Shabnam-Light.woff2") format("woff2");
+        font-weight: normal;
+        font-style: normal;
+        font-display: swap;
+    }
+    
+    *,
+    *:after,
+    *::before{
+        font-family: "shabnam-Medium";
+    }
 };
 
 @layer utilities {
@@ -15,5 +41,7 @@
 };
 
 @theme {
-
+    --font-shabnam-Bold: "shabnam-Bold";
+    --font-shabnam-Medium: "shabnam-Medium";
+    --font-shabnam-Light: "shabnam-Light";
 };
