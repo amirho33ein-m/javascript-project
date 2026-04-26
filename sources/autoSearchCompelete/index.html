@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../src/output.css">
+    <title>auto Search Compelete</title>
+</head>
+<body class="bg-gray-200">
+
+    <svg class="hidden">
+        <symbol id="search" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z" />
+        </symbol>
+    </svg>
+
+    <header class="mt-4">
+        <nav class="relative mx-auto max-w-150 bg-gray-50 p-3 rounded-2xl">
+            <form action="" class="flex items-center gap-1.5">
+                <label for="search" class="w-full">
+                    <input id="search" type="text" name="" placeholder="جست و جو ..." class="auto-search-compelete-unactive w-full bg-gray-100 p-2.5 outline-offset-4 outline-zinc-700/80 rounded-lg">
+                </label>
+                <button class="bg-cyan-600 p-2.5 cursor-pointer rounded-lg">
+                    <svg class="text-gray-50 size-5">
+                        <use href="#search"></use>
+                    </svg>
+                </button>
+            </form>
+            <!-- *autoSearchCompelete container -->
+            <div class="add-results-container absolute top-full right-0 left-0 z-40 translate-y-2 mx-auto hidden max-w-150 bg-gray-50 px-4 py-2.5 mt-3 rounded-2xl">
+                <div class="max-h-66 px-2 overflow-y-scroll scroll-bar-y">
+                    <div class="add-results divide-y divide-zinc-700/5">
+                        <!-- ? it'll push from js -->
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main class="show-context container max-w-300 mt-8">
+        <section class="bg-gray-100 max-md:text-sm/6 text-justify p-6 rounded-2xl">
+            <div>
+                <p class="context">
+                    هنوز چیزی را سرچ نکرده اید!!!
+                </p>
+            </div>
+        </section>
+    </main>
+    
+    <script src="./assets/app.js"></script>
+</body>
+</html>
