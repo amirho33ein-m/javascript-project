@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../src/output.css">
+    <title>clip Board</title>
+</head>
+<body class="bg-zinc-800">
+    
+    
+    <!--* successful massage -->
+    <div class="successful-massage invisible fixed z-50 top-0 left-0 flex items-center justify-center w-0 h-14 overflow-hidden ml-6 mt-6 bg-zinc-700 border-2 border-gray-200 rounded-md transition-all duration-200 delay-100">
+        <div>
+            <p class="text-sm text-teal-400 line-clamp-1">متن با موفقیت در کلیپ بورد کپی شد</p>
+        </div>
+    </div>
+
+    <main class="container relative mt-24 max-w-300 mx-auto">
+        <section>
+            <article>
+                <div class="text-center">
+                    <p class="select-text inline-block text-lg text-gray-200 px-4 py-1 hover:text-pink-600 hover:bg-zinc-200 border-2 border-pink-400/0 hover:border-pink-400/40 transition-colors rounded-md cursor-pointer">
+                        این یک متن تستی برای کپی در کلیپ بود است.
+                    </p>
+                </div>
+            </article>
+        </section>
+        <section class="w-2/3 mx-auto mt-8">
+            <article>
+                <div class="relative">
+                    <textarea name="" placeholder="متن خود را اینجا قرار دهید..." id="" class="w-full h-full min-h-40 text-gray-200 bg-zinc-700 border-t-4 border-gray-200 p-3 outline-0 caret-teal-400 placeholder:text-sm placeholder:text-gray-200/60 rounded-2xl"></textarea>
+                    <button class="paste absolute bottom-0 left-0 -translate-y-4 translate-x-3 px-3 py-1.5 bg-teal-400 hover:bg-teal-500 hover:text-gray-200 transition-colors text-shadow-zinc-700 cursor-pointer rounded-md">
+                        چسباندن
+                    </button>
+                </div>
+            </article>
+        </section>
+    </main>
+
+    <script src="./assets/app.js"></script>
+</body>
+</html>
