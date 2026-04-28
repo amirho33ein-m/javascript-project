@@ -152,9 +152,6 @@ const tenSecBackwordHandler = () => {
     }, 600);
 };
 
-
-//* 
-
 const nextAudioHandler = () => {
     ++turnAudio;
     if (turnAudio > listAudioLength){
@@ -240,15 +237,8 @@ const timeUpdate = () => {
     };
 };
 
-range.addEventListener("mousedown", () => isDragging = true);
-range.addEventListener("click", handleSeek);
-range.addEventListener("input", (event) => {
-    const {value} = event.target;
-    range.style.background = `linear-gradient(to right, rgb(0, 184, 219) ${+value * 100}%, rgba(0, 184, 219, 0.2) ${+value * 100}%)`;
-});
+// * handlers;
 audio.addEventListener("timeupdate", timeUpdate);
-// audio.addEventListener("loadedmetadata", () => duration.);
-
 playBackRate.addEventListener("click", playBackRateHandler);
 settingsMenu.addEventListener("click", MenuHandler);
 resetPlayBackRate.addEventListener("click", resetPlayBackRateHandler)
@@ -258,3 +248,9 @@ tenSecForword.addEventListener("click", tenSecForwordHandler);
 tenSecBackword.addEventListener("click", tenSecBackwordHandler);
 nextAudio.addEventListener("click", nextAudioHandler);
 previousAudio.addEventListener("click", previousAudioHandler);
+range.addEventListener("mousedown", () => isDragging = true);
+range.addEventListener("click", handleSeek);
+range.addEventListener("input", (event) => {
+    const {value} = event.target;
+    range.style.background = `linear-gradient(to right, rgb(0, 184, 219) ${+value * 100}%, rgba(0, 184, 219, 0.2) ${+value * 100}%)`;
+});
