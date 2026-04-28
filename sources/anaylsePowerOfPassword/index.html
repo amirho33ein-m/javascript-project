@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../src/output.css">
+    <title>anaylse Power Of Password</title>
+</head>
+<body class="bg-zinc-800 h-dvh flex items-center justify-center">
+    <svg class="hidden">
+        <symbol id="eye" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M2.036 12.322a1.012 1.012 0 0 1 0-.639C3.423 7.51 7.36 4.5 12 4.5c4.638 0 8.573 3.007 9.963 7.178.07.207.07.431 0 .639C20.577 16.49 16.64 19.5 12 19.5c-4.638 0-8.573-3.007-9.963-7.178Z" />
+            <path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z" />
+        </symbol>
+    </svg>
+    
+    <header class="max-w-80 w-full bg-zinc-700 p-6 rounded-2xl border-b-4 border-b-gray-100">
+        <nav>
+            <h1 class="text-2xl text-gray-100 text-center mb-4 pb-2 border-b border-b-gray-100/20">ثبت نام</h1>
+            <div>
+                <form action="" class="flex flex-col gap-y-3">
+                    <label for="input-1">
+                        <input placeholder="نام کاربری خود را وارد کنید..." id="input-1" type="text" class="w-full text-gray-100  p-2.5 bg-zinc-800 caret-orange-300 outline-offset-4 outline-orange-300 placeholder:text-sm placeholder:font-shabnam-Light rounded-md">
+                    </label>
+                    <label for="input-2" class="flex items-center justify-between gap-1.5">
+                        <input placeholder="پسورد امن برای خود انتخاب کنید..." id="input-2" type="password" class="w-full text-right text-gray-100 p-2.5 bg-zinc-800 caret-orange-300 outline-offset-4 outline-orange-300 placeholder:text-sm placeholder:font-shabnam-Light rounded-md">
+                        <button class="show-password bg-purple-500 hover:bg-purple-600 p-2.5 cursor-pointer rounded-md">
+                            <svg class="size-5 text-gray-100">
+                                <use href="#eye"></use>
+                            </svg>
+                        </button>
+                    </label>
+
+                    <div class="relative w-2/3 h-1 bg-gray-100/20 rounded-full">
+                        <div class="show-secure absolute inset-0 w-0 h-full bg-gray-100 transition-all delay-150 rounded-full"></div>
+                    </div>
+
+                    <button class="submit text-gray-100 bg-purple-500 hover:bg-purple-600 font-shabnam-Bold p-3 mt-2.5 cursor-pointer rounded-md">ثبت نام</button>
+                </form>
+            </div>
+        </nav>
+    </header>
+
+    <script src="./assets/app.js"></script>
+</body>
+</html>
