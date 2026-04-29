@@ -6,10 +6,10 @@
     <link rel="stylesheet" href="../src/output.css">
     <title>clock</title>
 </head>
-<body class="bg-linear-to-br from-zinc-800 via-pink-800 to-neutral-800 min-h-screen flex items-center justify-center p-4">
+<body class="bg-linear-to-br from-zinc-800 via-pink-800 to-neutral-800 min-h-dvh flex items-center justify-center p-4">
 
-    <div class="relative">
-        <div class="bg-white/10 backdrop-blur-md rounded-3xl p-6 shadow-2xl border border-white/20">
+    <main class="relative select-none">
+        <section class="bg-white/10 backdrop-blur-md rounded-3xl p-6 shadow-2xl border border-white/20">
             
             <div class="relative w-80 h-80 md:w-96 md:h-96 rounded-full bg-zinc-800 shadow-2xl border-8 border-white/40">
                 
@@ -48,15 +48,15 @@
                 <!-- 11 -->
                 <div class="absolute left-[26%] top-[10%] text-lg font-bold text-gray-50">11</div>
                 
-                <!-- ===== عقربه ساعت ===== -->
+                <!--  عقربه ساعت  -->
                 <div id="hourHand" class="hand absolute left-1/2 top-1/2 w-1.5 h-20 bg-gray-200 rounded-full -translate-x-1/2 -translate-y-full shadow-lg" 
                      style="transform-origin: 50% 100%; transform: rotate(0deg) translateY(-20%);"></div>
                 
-                <!-- ===== عقربه دقیقه ===== -->
+                <!--  عقربه دقیقه  -->
                 <div id="minuteHand" class="hand absolute left-1/2 top-1/2 w-1 h-25 bg-gray-50 rounded-full -translate-x-1/2 -translate-y-full shadow-md" 
                      style="transform-origin: 50% 100%; transform: rotate(0deg) translateY(-20%);"></div>
                 
-                <!-- ===== عقربه ثانیه (باریک و قرمز) ===== -->
+                <!-- عقربه ثانیه -->
                 <div id="secondHand" class="hand absolute left-1/2 top-1/2 w-0.5 h-30 bg-pink-500 rounded-full -translate-x-1/2 -translate-y-full shadow-sm" 
                      style="transform-origin: 50% 100%; transform: rotate(0deg) translateY(-20%);"></div>
                 
@@ -65,16 +65,19 @@
                 <div class="absolute left-1/2 top-1/2 w-1.5 h-1.5 bg-red-500 rounded-full -translate-x-1/2 -translate-y-1/2"></div>
                 
             </div>
-        </div>
+        </section>
         
         <!-- متن دیجیتال زیر ساعت با Tailwind -->
         <div class="mt-6 text-center">
-            <div id="digitalTime" class="text-3xl font-mono font-bold text-white bg-black/30 backdrop-blur-sm px-6 py-2 rounded-2xl inline-block shadow-lg border border-white/20">
-                00:00:00
+            <div id="digitalTime" class="inline-block text-3xl text-white bg-black/30 backdrop-blur-sm px-6 py-2 shadow-lg border border-white/20 overflow-hidden rounded-2xl">
+                <span class="time font-mono font-bold">
+                    00:00:00
+                </span>
             </div>
             <p class="text-white/60 text-sm mt-3 font-medium">ساعت عقربه‌ای با Tailwind CSS</p>
         </div>
-    </div>
+    </main>
+
 
     <script src="./assets/app.js"></script>
 </body>
