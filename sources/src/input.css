@@ -60,6 +60,15 @@
         border-radius: 50%;
         background: rgb(0, 184, 219);
     }
+
+    .scroll-bar-y{
+        &::-webkit-scrollbar{
+        @apply w-1;
+        }
+        &::-webkit-scrollbar-thumb{
+        @apply bg-cyan-700 rounded-2xl;
+        }
+    }
 };
 
 @theme {
