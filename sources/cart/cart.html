@@ -128,6 +128,15 @@
         </nav>
     </header>
 
+    <!-- * online - offline -->
+    <section class="fixed top-0 right-0 left-0 z-50 flex items-center justify-center translate-y-32 select-none cursor-pointer">
+        <div class="w-fit">
+            <div data-conection="" class="conection peer"></div>   <!-- ! online - offline -->
+            <p class="peer-data-[conection='offline']:block hidden text-center text-white px-6 py-3 bg-rose-600/80 rounded-sm">اتصال اینترنت وجود ندارد.</p>
+            <p class="peer-data-[conection='online']:block hidden text-center text-white px-6 py-3 bg-teal-500/80 rounded-sm">به اینترنت متصل شدید.</p>
+        </div>
+    </section>
+
     <main class="container max-w-300 mt-48">
         <section class="mb-12 md:mb-16">
             <!-- title of newest product -->
@@ -183,5 +192,7 @@
     </main>
 
     <script src="./assets/cartApp.js"></script>
+    <script src="./assets/checkConectionApp.js"></script>
+
 </body>
 </html>

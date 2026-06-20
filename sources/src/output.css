@@ -321,6 +321,9 @@
   .left-1\/2 {
     left: calc(1 / 2 * 100%);
   }
+  .left-4 {
+    left: calc(var(--spacing) * 4);
+  }
   .left-7 {
     left: calc(var(--spacing) * 7);
   }
@@ -688,6 +691,9 @@
   .w-\[95\%\] {
     width: 95%;
   }
+  .w-fit {
+    width: fit-content;
+  }
   .w-full {
     width: 100%;
   }
@@ -754,6 +760,22 @@
   }
   .translate-y-2 {
     --tw-translate-y: calc(var(--spacing) * 2);
+    translate: var(--tw-translate-x) var(--tw-translate-y);
+  }
+  .translate-y-15 {
+    --tw-translate-y: calc(var(--spacing) * 15);
+    translate: var(--tw-translate-x) var(--tw-translate-y);
+  }
+  .translate-y-24 {
+    --tw-translate-y: calc(var(--spacing) * 24);
+    translate: var(--tw-translate-x) var(--tw-translate-y);
+  }
+  .translate-y-28 {
+    --tw-translate-y: calc(var(--spacing) * 28);
+    translate: var(--tw-translate-x) var(--tw-translate-y);
+  }
+  .translate-y-30 {
+    --tw-translate-y: calc(var(--spacing) * 30);
     translate: var(--tw-translate-x) var(--tw-translate-y);
   }
   .translate-y-32 {
@@ -1050,9 +1072,6 @@
       background-color: color-mix(in oklab, var(--color-black) 30%, transparent);
     }
   }
-  .bg-cyan-100 {
-    background-color: var(--color-cyan-100);
-  }
   .bg-cyan-600 {
     background-color: var(--color-cyan-600);
   }
@@ -1116,6 +1135,15 @@
       background-color: color-mix(in oklab, var(--color-rose-500) 20%, transparent);
     }
   }
+  .bg-rose-600 {
+    background-color: var(--color-rose-600);
+  }
+  .bg-rose-600\/80 {
+    background-color: color-mix(in srgb, oklch(58.6% 0.253 17.585) 80%, transparent);
+    @supports (color: color-mix(in lab, red, red)) {
+      background-color: color-mix(in oklab, var(--color-rose-600) 80%, transparent);
+    }
+  }
   .bg-sky-500 {
     background-color: var(--color-sky-500);
   }
@@ -1127,6 +1155,15 @@
   }
   .bg-teal-400 {
     background-color: var(--color-teal-400);
+  }
+  .bg-teal-500 {
+    background-color: var(--color-teal-500);
+  }
+  .bg-teal-500\/80 {
+    background-color: color-mix(in srgb, oklch(70.4% 0.14 182.503) 80%, transparent);
+    @supports (color: color-mix(in lab, red, red)) {
+      background-color: color-mix(in oklab, var(--color-teal-500) 80%, transparent);
+    }
   }
   .bg-teal-600 {
     background-color: var(--color-teal-600);
@@ -1791,6 +1828,16 @@
       @media (hover: hover) {
         opacity: 100%;
       }
+    }
+  }
+  .peer-data-\[conection\=\'offline\'\]\:block {
+    &:is(:where(.peer)[data-conection='offline'] ~ *) {
+      display: block;
+    }
+  }
+  .peer-data-\[conection\=\'online\'\]\:block {
+    &:is(:where(.peer)[data-conection='online'] ~ *) {
+      display: block;
     }
   }
   .peer-data-\[result\=fat-1\]\:text-orange-400 {
